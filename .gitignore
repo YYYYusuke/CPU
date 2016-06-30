@@ -1,0 +1,8 @@
+# output files
+*.out
+
+# number files
+3
+
+# vcd files
+*.vcd
