@@ -29,7 +29,7 @@ always @(pc) begin
 	end
 	4 : begin
 		op[31:28] <= JNZ;
-		op[27:20] <= 78;// to Reproceed (to register7)
+		op[27:20] <= 7;// to Reproceed (to register7)
 	end
 	5 : begin
 		op[31:28] <= ADD;
@@ -47,19 +47,19 @@ always @(pc) begin
 	7 : begin
 		op[31:28] <= LI;
 		op[27:24] <= 0;
-		op[23:0] <= 24'b1001_0000_0001_0001_0000_0000; //blue initialized
+		op[23:0] <= 24'b1000_0100_0000_0010_0000_0100; //blue initialized
 	end
 
 	8 : begin
 		op[31:28] <= LI;
 		op[27:24] <= 1;
-		op[23:0] <= 24'b0100_0000_1100_0000_0010_0000; // orange initialized
+		op[23:0] <= 24'b0100_0010_0000_0000_0000_0011; // orange initialized
 	end
 
 	9 : begin
 		op[31:28] <= LI;
 		op[27:24] <= 2;
-		op[23:0] <= 24'b0010_1000_0000_1000_1000_0000; // yellow initialized
+		op[23:0] <= 24'b0010_0000_0011_1000_0000_0000; // yellow initialized
 	end
 /*
 	10 : begin
@@ -496,6 +496,7 @@ always @(pc) begin
 		op[27:20] <= 71;
 	end
 
+/*
 // register7
 	73 : begin
 		op[31:28] <= REFERENCE;
@@ -531,7 +532,7 @@ always @(pc) begin
 		op[27:20] <= 73; //to register7 top
 	end
 	
-
+*/
 endcase
 
 end

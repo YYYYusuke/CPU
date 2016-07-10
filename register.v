@@ -1,18 +1,20 @@
-module regfile(we, dst, src0, src1, data, outa, outb, clk, rst_n);
+module regfile(we, dst, src0, src1, data, outa, outb, clk, rst_n,reg0,reg1,reg2,reg6);
 		input [3:0] dst, src0, src1;
 		input [23:0] data;
 		input clk, rst_n;
 		input we;
 
 		output [23:0] outa, outb;
+		output wire [23:0] reg0,reg1,reg2,reg6;
 
 		reg [23:0] regis [15:0];
-		wire[23:0] reg0,reg1,reg2,reg3,reg4,reg5,reg6,reg7,reg8,reg9,reg10,reg11,reg12,reg13,reg14,reg15;
+		wire[23:0] reg3,reg4,reg5,reg7,reg8,reg9,reg10,reg11,reg12,reg13,reg14,reg15;
+		
 always @(posedge clk) begin
 	if (!rst_n) begin
-		regis[0] <= 24'b1001_0000_0001_0001_0000_0000;//blue
-		regis[1] <= 24'b0100_0000_1100_0000_0010_0000;//orange
-		regis[2] <= 24'b0010_1000_0000_1000_1000_0000;//yellow
+		regis[0] <= 24'b1000_0100_0000_0010_0000_0100;//blue
+		regis[1] <= 24'b0100_0010_0000_0000_0000_0011;//orange
+		regis[2] <= 24'b0010_0000_0011_1000_0000_0000;//yellow
 		regis[3] <= 0;  //dont never use this regis
 		regis[4] <= 0;
 		regis[5] <= 0;

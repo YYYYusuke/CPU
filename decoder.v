@@ -37,7 +37,7 @@ always @(*) begin
 		src0 <= op[23:20];
 		pc_in <= 0;
 		pc_we <= 0;
-		reg_we <= 1;
+		reg_we <= 0;
 		sel1 <= 0;
 		sel2 <= 0;
 		data <= 0;
