@@ -1,7 +1,7 @@
-module top(clk, rst_n,mem0,mem1,mem2,reg0,reg1,reg2,reg6);
+module top(clk, rst_n,mem0,mem1,mem2,mem3,reg0,reg1,reg2,reg6);
 	input wire clk, rst_n;
 
-	output wire [23:0] mem0,mem1,mem2;
+	output wire [23:0] mem0,mem1,mem2,mem3;
 	output wire [23:0] reg0,reg1,reg2,reg6;
 
 	wire [3:0] dr1, dr3, dr4, da ;
@@ -24,7 +24,7 @@ zf z0(.clk(clk), .rst_n(rst_n), .zf_in(az), .zf_out(zd));
 
 programcounter p0(.PC_in(dp1), .we(dp2), .PC_out(pi), .clk(clk), .rst_n(rst_n));
 
-memory m0(.we(dw), .dout(ms), .addr(rm), .din(am), .clk(clk), .rst_n(rst_n), .mem0(mem0), .mem1(mem1), .mem2(mem2));
+memory m0(.we(dw), .dout(ms), .addr(rm), .din(am), .clk(clk), .rst_n(rst_n), .mem0(mem0), .mem1(mem1), .mem2(mem2), .mem3(mem3));
 
 decoder d0(.dst(dr1), .reg_we(dr2), .src0(dr3), .src1(dr4), .data(ds), .alu_op(da), .mem_we(dw), .sel1(ds1), .sel2(ds2), .op(id), .pc_we(dp2), .pc_in(dp1), .zf(zd));
 

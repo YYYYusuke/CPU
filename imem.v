@@ -13,21 +13,21 @@ always @(pc) begin
 		op[27:24] <= 8;
 		op[23:20] <= 6;
 	end
-	1 : begin
+	3 : begin
 		op[31:28] <= JMP;
 		op[27:20] <= 13; // to reference module
 	end
-	2 : begin
+	4 : begin
 		op[31:28] <= JMP;
 		op[27:20] <= 61; //to checker
 	end
 
-	3 : begin
+	1 : begin
 		op[31:28] <= CHECK;
 		op[27:24] <= 8;
 		op[23:0] <= 24'b111_11111_1111_1111_1111_1111 ; //(カット情報がnext procedure7に移動したら)
 	end
-	4 : begin
+	2 : begin
 		op[31:28] <= JNZ;
 		op[27:20] <= 7;// to Reproceed (to register7)
 	end
@@ -47,19 +47,19 @@ always @(pc) begin
 	7 : begin
 		op[31:28] <= LI;
 		op[27:24] <= 0;
-		op[23:0] <= 24'b1000_0100_0000_0010_0000_0100; //blue initialized
+		op[23:0] <= 24'b1000_0000_0000_0011_0010_0000; //blue initialized
 	end
 
 	8 : begin
 		op[31:28] <= LI;
 		op[27:24] <= 1;
-		op[23:0] <= 24'b0100_0010_0000_0000_0000_0011; // orange initialized
+		op[23:0] <= 24'b0100_0011_0000_0000_0000_0010; // orange initialized
 	end
 
 	9 : begin
 		op[31:28] <= LI;
 		op[27:24] <= 2;
-		op[23:0] <= 24'b0010_0000_0011_1000_0000_0000; // yellow initialized
+		op[23:0] <= 24'b0010_0100_0001_0000_0000_0100; // yellow initialized
 	end
 /*
 	10 : begin
@@ -204,7 +204,7 @@ always @(pc) begin
 	end
 	32 : begin
 		op[31:28] <= JMP;
-		op[27:20] <= 2;
+		op[27:20] <= 4;
 	end
 
 
@@ -231,7 +231,7 @@ always @(pc) begin
 	end
 	36 : begin
 		op[31:28] <= JMP;
-		op[27:20] <= 2;
+		op[27:20] <= 4;
 	end
 
 
@@ -258,7 +258,7 @@ always @(pc) begin
 	end
 	40 : begin
 		op[31:28] <= JMP;
-		op[27:20] <= 2;
+		op[27:20] <= 4;
 	end
 
 
@@ -285,7 +285,7 @@ always @(pc) begin
 	end
 	44 : begin
 		op[31:28] <= JMP;
-		op[27:20] <= 2;
+		op[27:20] <= 4;
 	end
 
 
@@ -312,7 +312,7 @@ always @(pc) begin
 	end
 	48 : begin
 		op[31:28] <= JMP;
-		op[27:20] <= 2;
+		op[27:20] <= 4;
 	end
 
 
@@ -339,7 +339,7 @@ always @(pc) begin
 	end
 	52 : begin
 		op[31:28] <= JMP;
-		op[27:20] <= 2;
+		op[27:20] <= 4;
 	end
 
 
@@ -366,7 +366,7 @@ always @(pc) begin
 		end
 	56 : begin
 		op[31:28] <= JMP;
-		op[27:20] <= 2;
+		op[27:20] <= 4;
 	end
 
 
@@ -393,7 +393,7 @@ always @(pc) begin
 		end
 	60 : begin
 		op[31:28] <= JMP;
-		op[27:20] <= 2;
+		op[27:20] <= 4;
 	end
 
 
@@ -436,7 +436,7 @@ always @(pc) begin
 
 	62 : begin
 		op[31:28] <= ZNJ;
-		op[27:20] <= 3; // to top
+		op[27:20] <= 5; // to top
 	end
 
 	63 : begin
@@ -447,7 +447,7 @@ always @(pc) begin
 
 	64 : begin
 		op[31:28] <= ZNJ;
-		op[27:20] <= 3; // to top
+		op[27:20] <= 5; // to top
 	end
 
 	65 : begin
@@ -463,7 +463,7 @@ always @(pc) begin
 
 	67 : begin
 		op[31:28] <= JMP ;
-		op[27:20] <= 3; //to TOP
+		op[27:20] <= 5; //to TOP
 	end 
 
 
@@ -483,15 +483,20 @@ always @(pc) begin
 		op[27:24] <= 15; //src1
 		op[23:20] <= 2; //src0
 	end //yellow STORE
+	71 : begin
+		op[31:28] <= STORE;
+		op[27:24] <= 11; //src1
+		op[23:20] <= 6; //src0
+	end //register6 STORE
 
 
 //for ENDLOOP
-	71 : begin
+	72 : begin
 		op[31:28] <= JMP;
 		op[27:20] <= 72;
 	end
 
-	72 : begin
+	73 : begin
 		op[31:28] <= JMP;
 		op[27:20] <= 71;
 	end

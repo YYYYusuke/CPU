@@ -1,10 +1,10 @@
-module memory(addr, din, we, clk, rst_n, dout, mem0, mem1, mem2);
+module memory(addr, din, we, clk, rst_n, dout, mem0, mem1, mem2,mem3);
 		input wire we;
 		input wire [23:0] addr, din ;
 		input wire clk, rst_n;
 	
 		output [23:0] dout;
-		output wire [23:0] mem0,mem1,mem2;
+		output wire [23:0] mem0,mem1,mem2,mem3;
 		reg [23:0] mem[255:0];
 
 always @(posedge clk) begin
@@ -279,6 +279,7 @@ assign out = mem[addr];
 assign mem0 = mem[0];
 assign mem1 = mem[1];
 assign mem2 = mem[2];
+assign mem3 = mem[3];
 assign mem13 = mem[13];
 assign mem14 = mem[14];
 assign mem15 = mem[15];

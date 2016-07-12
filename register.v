@@ -12,9 +12,9 @@ module regfile(we, dst, src0, src1, data, outa, outb, clk, rst_n,reg0,reg1,reg2,
 		
 always @(posedge clk) begin
 	if (!rst_n) begin
-		regis[0] <= 24'b1000_0100_0000_0010_0000_0100;//blue
-		regis[1] <= 24'b0100_0010_0000_0000_0000_0011;//orange
-		regis[2] <= 24'b0010_0000_0011_1000_0000_0000;//yellow
+		regis[0] <= 24'b1000_0000_0000_0011_0010_0000;//blue
+		regis[1] <= 24'b0100_0011_0000_0000_0000_0010;//orange
+		regis[2] <= 24'b0010_0100_0001_0000_0000_0100;//yellow
 		regis[3] <= 0;  //dont never use this regis
 		regis[4] <= 0;
 		regis[5] <= 0;
@@ -23,7 +23,7 @@ always @(posedge clk) begin
 		regis[8] <= 0; //for reference
 		regis[9] <= 24'b0010_0000_0000_0000_0000_0000; //jyoui add(1)
 		regis[10] <= 0; 
-		regis[11] <= 0;
+		regis[11] <= 3;
 		regis[12] <= 24'b0000_0000_0000_0000_0000_0001; //kai add(1)
 		regis[13] <= 0; // for memory of blue
 		regis[14] <= 1; // for memory of orange
