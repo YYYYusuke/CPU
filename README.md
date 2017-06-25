@@ -1,4 +1,4 @@
-CPU設計のお勉強
+LCPU設計のお勉強
 ====
 
 Overview
@@ -8,7 +8,7 @@ Overview
 ## 手段
 Verilog, GTKwave
 ## 回路構成
-
+<a><img src="https://github.com/YYYYusuke/CPU/blob/master/images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202017-06-25%2013.21.10.png" width=50%></a>
 ## 使用する命令セット
 1.ADD 加算  
 2.CHECK 指定したレジスタの値の照合  
