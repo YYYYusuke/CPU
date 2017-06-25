@@ -35,16 +35,16 @@ Verilog, GTKwave
 3.キューブが完成していれば結果をSTORE  
 4.完成していなければ次の回転へ...  
 
-##回転の仕組み
+## 回転の仕組み  
 
 <a><img src="https://github.com/YYYYusuke/CPU/blob/master/images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202017-06-25%2013.44.13.png" width=50%></a>
 
 
-## アルゴリズム
+## アルゴリズム  
 
 <a><img src="https://github.com/YYYYusuke/CPU/blob/master/images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202017-06-25%2013.44.23.png" width=50%></a>
 
-##探索方法
+## 探索方法  
 <a><img src="https://github.com/YYYYusuke/CPU/blob/master/images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202017-06-25%2013.44.40.png" width=50%></a>
 
 ##Result
