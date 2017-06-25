@@ -47,7 +47,7 @@ Verilog, GTKwave
 ## 探索方法  
 <a><img src="https://github.com/YYYYusuke/CPU/blob/master/images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202017-06-25%2013.44.40.png" width=50%></a>
 
-##Result
+## Result  
 <a><img src="https://github.com/YYYYusuke/CPU/blob/master/images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202017-06-25%2013.45.04.png" width=50%></a>
 
 ## URL
