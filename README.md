@@ -1,4 +1,4 @@
-LCPU設計のお勉強
+CPU設計のお勉強
 ====
 
 Overview
