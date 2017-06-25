@@ -5,22 +5,20 @@ Overview
 
 ## 目的
 2*2"2て崩しのルービックキューブを解くアルゴリズムの実装を通して，CPUの仕組みを理解する
-## Demo
+## 手段
+Verilog, GTKwave
+## 回路構成
 
-## VS. 
+## 使用する命令セット
 
-## Requirement
+##アルゴリズム 
 
-## Usage
-
-## Install
 
 ## Contribution
 
-## Licence
+## URL
 
-[MIT](https://github.com/tcnksm/tool/blob/master/LICENCE)
 
 ## Author
 
-[tcnksm](https://github.com/tcnksm)
+
